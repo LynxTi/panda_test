@@ -1,0 +1,92 @@
+//Взято с https://medium.com/@stasonmars/современный-сброс-css-f5816963c82b
+
+//Возможн, стоит взят что-то с https://habr.com/ru/post/420539/
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class]
+  padding: 0
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+  margin: 0
+
+/* Выставляем основные настройки по-умолчанию для body */
+body
+  min-height: 100vh
+  scroll-behavior: smooth
+  //плавный скролл к анкорам
+  text-rendering: optimizeSpeed
+  line-height: 1.5
+  -webkit-text-size-adjust: 100%
+  //запретить корректировку размера шрифта после изменения ориентации в iOS
+  -webkit-font-smoothing: antialiased
+  //делает текст более тонким в Сафари на Маках
+  -webkit-tap-highlight-color: transparent
+//убирает синее подсвечивание при клике на девайсах.
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class]
+  list-style: none
+
+a
+  text-decoration: none
+  text-decoration-color: inherit
+  color: inherit
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class])
+  text-decoration-skip-ink: auto
+  color: inherit
+  font-weight: bold
+
+  &:hover
+    text-decoration: underline
+
+i
+  font-style: initial
+
+/* Упрощаем работу с изображениями */
+img
+  max-width: 100%
+  display: block
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + *
+  margin-top: 1em
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select
+  font: inherit
+  border: none
+  outline: 0
+
+p
+  margin-block-end: revert
+
+
+
+

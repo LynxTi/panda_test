@@ -1,0 +1,16 @@
+@mixin mediaMobileLargeUp
+  @media all and (min-width: 390px)
+    @content
+
+@mixin mediaTabletUp
+  @media all and (min-width: 768px)
+    @content
+
+@mixin mediaTabletHorizontalDown
+  @media all and (max-width: 1024px)
+    @content
+
+@mixin mediaDesktopSmallUp
+  @media all and (min-width: 1024px)
+    @content
+
